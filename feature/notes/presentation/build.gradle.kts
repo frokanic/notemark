@@ -12,7 +12,7 @@ kotlin {
     android {
         namespace = "com.frokanic.feature.notes.presentation"
         compileSdk {
-            version = release(37)
+            version = release(libs.versions.android.compileSdk.get().toInt())
         }
         minSdk = 24
 
@@ -62,7 +62,11 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(libs.kotlin.stdlib)
-                // Add KMP dependencies here
+
+                implementation(projects.core.common)
+                implementation(projects.core.designsystem)
+                implementation(projects.core.presentation)
+                implementation(projects.feature.notes.domain)
             }
         }
 

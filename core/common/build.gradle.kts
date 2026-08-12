@@ -12,7 +12,7 @@ kotlin {
     android {
         namespace = "com.frokanic.core.common"
         compileSdk {
-            version = release(37)
+            version = release(libs.versions.android.compileSdk.get().toInt())
         }
         minSdk = 24
 

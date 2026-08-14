@@ -1,4 +1,12 @@
 [versions]
+# Project
+projectApplicationId = "com.frokanic.notemark"
+projectVersionName = "1.0"
+projectVersionCode = "1"
+projectCompileSdkVersion = "36"
+projectMinSdkVersion = "24"
+projectTargetSdkVersion = "36"
+
 # Android / AGP
 agp = "9.0.1"
 android-compileSdk = "36"
@@ -60,6 +68,7 @@ kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ve
 compose-gradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeMultiplatform" }
 composeCompiler-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+kotlin-serialization-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 
 # Kotlin
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -127,6 +136,15 @@ junit = { module = "junit:junit", version.ref = "junit" }
 turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 
 [plugins]
+# Convention
+convention-android-application = { id = "com.frokanic.convention.android.application", version = "unspecified" }
+convention-android-application-compose = { id = "com.frokanic.convention.android.application.compose", version = "unspecified" }
+convention-kmp-library = { id = "com.frokanic.convention.kmp.library", version = "unspecified" }
+convention-kmp-web = { id = "com.frokanic.convention.kmp.web", version = "unspecified" }
+convention-cmp-library = { id = "com.frokanic.convention.cmp.library", version = "unspecified" }
+convention-cmp-feature = { id = "com.frokanic.convention.cmp.feature", version = "unspecified" }
+convention-room = { id = "com.frokanic.convention.room", version = "unspecified" }
+
 # Android
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidMultiplatformLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
